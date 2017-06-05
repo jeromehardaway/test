@@ -1,0 +1,43 @@
+<h2>Update Profile</h2>
+
+<%= form_for @user, url: '/profile' do |f| %>
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.text_field :first_name %>
+        <label for="first_name">First Name</label>
+      </div>
+      <div class="input-field col s6">
+        <%= f.text_field :last_name %>
+        <label for="last_name">Last Name</label>
+      </div>
+      <div class="switch">
+ <label>
+   Youth
+   <input type="checkbox">
+   <span class="lever"></span>
+   Ally
+ </label>
+</div>
+      <div class="row">
+        <button type="submit" name="save_button" class="btn right">Save</button>
+      </div>
+    </div>
+  </form>
+</div>
+<p>
+  <h5>Select Which Categories You Wish See Info On</h5>
+  <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+  <label for="filled-in-box">Education</label>
+</p>
+<p>
+  <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+  <label for="filled-in-box">Resources</label>
+</p>
+<p>
+  <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+  <label for="filled-in-box">Support</label>
+</p>
+
+<% end %>

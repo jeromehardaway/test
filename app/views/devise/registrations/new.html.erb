@@ -1,0 +1,65 @@
+
+<div class="container">
+
+<div class="center"><%= image_tag "4.png" %></div>
+<h5 class="center-align">No One Deserves To Be Left Alone</h5>
+<div class="center"><%= image_tag "ty.jpg" %></div>
+<p class="flow-text">UPL&hearts;FT is a safe online community for LGBTQ youth to find support and resources while on thier journey of self-discovery.</p>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email, style: 'color: #bdc3c7;'%><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field" style="color:white;">
+    <%= f.label :password, style: 'color: #bdc3c7;' %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field" style="color:white;">
+    <%= f.label :password_confirmation, style: 'color: #bdc3c7;' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <button class="btn waves-effect waves-light" type="signup" name="action">
+    <%= f.submit "Sign up" %>
+  </button>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>
+<footer class="page-footer">
+     <div class="container">
+       <div class="row">
+         <div class="col l6 s12">
+           <h5 class="white-text">UPL&hearts;FT</h5>
+           <p class="grey-text text-lighten-4">UPL&hearts;FT is a social enterprise app built at the Shifting Anew Conference.</p>
+         </div>
+         <div class="col l4 offset-l2 s12">
+           <h5 class="white-text">Team</h5>
+           <ul>
+             <li><a class="grey-text text-lighten-3" href="#!">Nicky Cao</a></li>
+             <li><a class="grey-text text-lighten-3" href="#!">Nathan Petithomme</a></li>
+             <li><a class="grey-text text-lighten-3" href="#!">Sameerah Haque</a></li>
+             <li><a class="grey-text text-lighten-3" href="#!">Rayven Smith</a></li>
+             <li><a class="grey-text text-lighten-3" href="#!">Alissa Smith</a></li>
+             <li><a class="grey-text text-lighten-3" href="#!">Anthoni Johnson</a></li>
+             <li><a class="grey-text text-lighten-3" href="#!">Jerome Hardaway</a></li>
+             <li><a class="grey-text text-lighten-3" href="#!">Amina Yamusah</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="footer-copyright">
+       <div class="container">
+       © 2016 Copyright UPL&hearts;FT
+       <a class="grey-text text-lighten-4 right" href="#!">More Information for Helping LGBTQ youth here.</a>
+       </div>
+     </div>
+   </footer>
